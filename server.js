@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs'); //handlebars
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 //configure partial capabilities
@@ -71,8 +73,8 @@ hbs.registerHelper('ScreamIt' , (text) => {
     });
   });
 
-  app.listen(3000, () => { //2 args: 1) port number as arg 2) function, do something while page loads
-    console.log('Server is up on port 3000');
+  app.listen(port, () => { //2 args: 1) port number as arg 2) function, do something while page loads
+    console.log(`Server is up on port ${port}`);
   });
 
   //run in browser: http://localhost:3000/
