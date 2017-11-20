@@ -73,6 +73,12 @@ hbs.registerHelper('ScreamIt' , (text) => {
     });
   });
 
+  app.get('/projects', (req, res)=>{
+    res.render('projects.hbs', {
+      pageTitle : 'Projects Page'
+    });
+  });
+
   app.listen(port, () => { //2 args: 1) port number as arg 2) function, do something while page loads
     console.log(`Server is up on port ${port}`);
   });
