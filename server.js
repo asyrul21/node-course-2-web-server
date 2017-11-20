@@ -31,7 +31,7 @@ app.use((req, res, next) => {
   next(); //call next to start executing handlers
 });
 
-app.use((req, res, next) => res.render('maintenance.hbs'));
+//app.use((req, res, next) => res.render('maintenance.hbs'));
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+++++++++++++++use a static web page from a folder+++++++++++++++++++
